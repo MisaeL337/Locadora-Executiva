@@ -1,0 +1,316 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRES4 locadora executiva | Transporte Corporativo</title>
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon (substitua pelo caminho do seu ícone, ex: img/favicon.png) -->
+    <link rel="icon" href="img/ChatGPT Image 11 de fev. de 2026, 14_04_48.png" type="image/png">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1) HEADER FIXO -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                TRES4 <span class="text-gold">locadora executiva</span>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#inicio" class="nav-link">Início</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2) HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content fade-in-section">
+            <h1>Locação de Van Executiva com <span class="text-gold">Conforto</span> e <span class="text-gold">Pontualidade</span></h1>
+            <p>Transporte corporativo, viagens, eventos e traslados com segurança e profissionalismo de alto nível.</p>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: ORÇAMENTO VIA WHATSAPP -->
+    <section id="orcamento" class="section-padding bg-graphite">
+        <div class="container">
+            <div class="section-header fade-in-section">
+                <h2>Orçamento Rápido via WhatsApp</h2>
+                <div class="divider"></div>
+                <p>Preencha os dados abaixo e envie para receber sua cotação personalizada.</p>
+            </div>
+
+            <div class="quote-wrapper fade-in-section">
+                <form id="whatsapp-form">
+                    <div class="form-group">
+                        <label for="origem">Local de Partida</label>
+                        <input type="text" id="origem" placeholder="Ex: Aeroporto de Guarulhos" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destino">Local de Destino</label>
+                        <input type="text" id="destino" placeholder="Ex: Hotel Hilton Morumbi" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="data-ida">Data de Ida</label>
+                            <input type="date" id="data-ida" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="horario-saida">Horário de Saída</label>
+                            <input type="time" id="horario-saida" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tipo-viagem">Tipo de Viagem</label>
+                            <select id="tipo-viagem" required>
+                                <option value="Só Ida">Só Ida</option>
+                                <option value="Bate e Volta">Bate e Volta</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="passageiros">Nº de Passageiros</label>
+                            <input type="number" id="passageiros" placeholder="Ex: 15" min="1" required>
+                        </div>
+                    </div>
+                    <div class="form-group" id="campo-data-volta" style="display: none;">
+                        <label for="data-volta">Data de Volta</label>
+                        <input type="date" id="data-volta">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-veiculo">Tipo de Veículo</label>
+                        <select id="tipo-veiculo">
+                            <option value="Van 15 lugares">Van 15 lugares</option>
+                            <option value="Van 16 lugares">Van 16 lugares</option>
+                            <option value="Van 20 lugares">Van 20 lugares</option>
+                            <option value="Micro-ônibus 36 lugares">Micro-ônibus 36 lugares</option>
+                            <option value="Ônibus 46 lugares">Ônibus 46 lugares</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary btn-large" style="width: 100%; justify-content: center;">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar para WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3) SEÇÃO DE SERVIÇOS -->
+    <section id="servicos" class="section-padding bg-dark">
+        <div class="container">
+            <div class="section-header fade-in-section">
+                <h2>Nossos Serviços</h2>
+                <div class="divider"></div>
+                <p>Soluções completas em mobilidade corporativa e turismo.</p>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="card fade-in-section">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-van-shuttle"></i>
+                    </div>
+                    <h3>Van Executiva</h3>
+                    <p>Veículos modernos equipados com ar-condicionado, poltronas reclináveis e Wi-Fi para seu conforto.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card fade-in-section">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h3>Traslado Aeroporto</h3>
+                    <p>Receptivo em aeroportos com pontualidade garantida. Monitoramos seu voo para evitar atrasos.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card fade-in-section">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3>Viagens e Turismo</h3>
+                    <p>Roteiros turísticos, excursões e viagens em família com motoristas experientes em estradas.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card fade-in-section">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3>Eventos Corporativos</h3>
+                    <p>Logística de transporte para congressos, feiras e reuniões de negócios com total discrição.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4) SEÇÃO "POR QUE ESCOLHER A GENTE" -->
+    <section id="diferenciais" class="section-padding bg-graphite">
+        <div class="container">
+            <div class="section-header fade-in-section">
+                <h2>Por Que Nos Escolher?</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item fade-in-section">
+                    <i class="fa-solid fa-user-tie text-gold"></i>
+                    <div>
+                        <h4>Motoristas Profissionais</h4>
+                        <p>Equipe treinada, uniformizada e discreta.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item fade-in-section">
+                    <i class="fa-solid fa-check-to-slot text-gold"></i>
+                    <div>
+                        <h4>Veículos Revisados</h4>
+                        <p>Frota nova com manutenção preventiva rigorosa.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item fade-in-section">
+                    <i class="fa-solid fa-clock text-gold"></i>
+                    <div>
+                        <h4>Pontualidade Garantida</h4>
+                        <p>Respeito absoluto aos horários agendados.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item fade-in-section">
+                    <i class="fa-brands fa-whatsapp text-gold"></i>
+                    <div>
+                        <h4>Atendimento Rápido</h4>
+                        <p>Orçamentos ágeis e suporte via WhatsApp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5) SEÇÃO DE GALERIA / FOTOS -->
+    <section id="galeria" class="section-padding bg-dark">
+        <div class="container">
+            <div class="section-header fade-in-section">
+                <h2>Nossa Frota</h2>
+                <div class="divider"></div>
+                <p>Conforto, higienização e tecnologia em cada detalhe.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in-section">
+                    <img src="img/96c2bb25-fee1-4626-82e7-6e693b0df687.jpg" alt="Interior Van Executiva">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item fade-in-section">
+                    <img src="img/d9f26574-5189-4504-b9fa-1c1dcefc4586.jpg" alt="Van Executiva Externa">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item fade-in-section">
+                    <img src="img/294450ea-e148-44d5-8712-19828cb060cf.jpg" alt="Conforto Poltronas">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item fade-in-section">
+                    <img src="img/e21694b3-dbf9-4ef1-8dc4-aefa2a2aeecd.jpg" alt="Viagem Corporativa">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6) SEÇÃO DE DEPOIMENTOS -->
+    <section id="depoimentos" class="section-padding bg-graphite">
+        <div class="container">
+            <div class="section-header fade-in-section">
+                <h2>O Que Dizem Nossos Clientes</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-section">
+                    <div class="stars text-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Serviço impecável! A van estava extremamente limpa e o motorista foi muito pontual. Recomendo para qualquer empresa."</p>
+                    <h4>Carlos Mendes</h4>
+                    <span>São Paulo, SP</span>
+                </div>
+
+                <div class="testimonial-card fade-in-section">
+                    <div class="stars text-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Contratamos para um evento corporativo e tudo saiu perfeito. O atendimento via WhatsApp foi rápido e eficiente."</p>
+                    <h4>Fernanda Souza</h4>
+                    <span>Campinas, SP</span>
+                </div>
+
+                <div class="testimonial-card fade-in-section">
+                    <div class="stars text-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Viagem tranquila e segura com minha família. O motorista foi muito atencioso e o veículo era super confortável."</p>
+                    <h4>Roberto Almeida</h4>
+                    <span>Santos, SP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7) SEÇÃO SOBRE (RECONSTRUÍDA) -->
+    <section id="sobre" class="section-padding bg-dark">
+        <div class="container">
+            <div class="section-header fade-in-section">
+                <h2>Sobre a <span class="text-gold">TRES4 locadora executiva</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content fade-in-section">
+                <div class="about-text-new">
+                    <p>Com mais de 10 anos de experiência no mercado de transporte executivo, nossa missão é oferecer uma experiência de viagem superior, unindo segurança, conforto e pontualidade.</p>
+                    <p>Atendemos empresas de grande porte, eventos sociais e grupos de turismo, sempre com uma frota renovada e motoristas altamente qualificados e bilíngues (sob consulta).</p>
+                </div>
+                <div class="about-image-new">
+                    <img src="img/69a67523-b2e0-4eae-94ff-9f97b449d1ce.jpg" alt="Motorista Executivo">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 9) FOOTER -->
+    <footer class="footer bg-dark">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                TRES4 <span class="text-gold">locadora executiva</span>
+                <p>Atendimento: São Paulo, Grande SP e Litoral</p>
+                <p>&copy; 2024 Todos os direitos reservados.</p>
+                <p><a href="https://kadosh-tech.vercel.app/" target="_blank" class="kadosh-link">Desenvolvido por Kadosh Tech</a></p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/locadoradevanstres4/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5511943719478" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="js/js.js"></script>
+</body>
+</html>
