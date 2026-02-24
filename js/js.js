@@ -133,4 +133,37 @@ document.addEventListener('DOMContentLoaded', () => {
             window.open(linkWhatsApp, '_blank');
         });
     }
+
+    // --- Lightbox (Galeria em Tela Cheia) ---
+    // Cria o elemento do lightbox dinamicamente no HTML
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Visualização em Tela Cheia">
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector('img');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    // Adiciona evento de clique em todas as imagens da galeria
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            if (img && img.getAttribute('src')) {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            }
+        });
+    });
+
+    // Fechar ao clicar no X ou fora da imagem
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImg) {
+            lightbox.classList.remove('active');
+        }
+    });
     });
